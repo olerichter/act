@@ -819,6 +819,9 @@ int expr_equal (Expr *a, Expr *b);
 Expr *expr_expand (Expr *e, ActNamespace *ns, Scope *s, int is_lval = 0);
 
 /* for expanded expressions */
+/** @addtogroup E_TYPES
+ * @{
+ */
 #define E_TYPE  (E_END + 10)  /* the "l" field will point to an InstType */
 #define E_ARRAY (E_END + 11) /* an expanded paramter array
 				- the l field will point to the ValueIdx
@@ -844,6 +847,7 @@ Expr *expr_expand (Expr *e, ActNamespace *ns, Scope *s, int is_lval = 0);
 #define E_BUILTIN_BOOL (E_END + 23)
 #define E_BUILTIN_INT  (E_END + 24)
 #define E_NEWEND  E_END + 25
+/** @} */
 
 /*
   Push expansion context 
